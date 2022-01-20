@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./resource/js/jquery-3.4.1.min.js"></script>
+    <script src="./resource/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./resource/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="./resource/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./resource/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href='./index.html'><img src="./resource/img/logo.png" alt="logo" title="logo"></a>
+        </div>
+
+        <nav>
+            <ul style="margin: 0; padding: 0;">
+                <li><a href="/basket.html">장바구니</a></li>
+                <li><a href="#">조회하기</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="/register.html">회원가입</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="register">
+        <div class="container">
+            <h2 class="my-5">회원가입</h2>
+            <form action="">
+                <div class="mb-3">
+                    <label for="id" class="label-control">아이디</label>
+                    <input type="text" name="id" id="id" class="form-control" placeholder="아이디를 입력해주세요." required>
+                    <button class="bnt btn-cus mt-2" type="button">중복 확인</button>
+                </div>
+                <div class="mb-3">
+                    <label for="pass">비밀번호</label>
+                    <input type="password" name="pass" class="form-control" id="pass" placeholder="비밀번호를 입력해주세요." required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="label-control">이름</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="이름을 입력해주세요." required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="label-control">전화번호</label>
+                    <input type="tel" name="phone" id="phone" class="form-control" placeholder="전화번호를 입력해주세요. (-없이 숫자만 입력)" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="E-mail을 입력해주세요." required>
+                </div>
+                <div class="mb-3">
+                    <label for="num" class="label-control">인증번호</label>
+                    <input type="text" name="num" id="num" class="form-control" autocomplete="none" placeholder="인증번호를 입력해주세요." required>
+                </div>
+
+                <button class="btn-cus mb-5" type="submit">확인</button>
+            </form>
+
+            <div class="keyboard">
+                <button class="btn btn-primary">2</button>
+                <button class="btn btn-primary">4</button>
+                <button class="btn btn-primary">7</button>
+                <button class="btn btn-primary">1</button>
+                <button class="btn btn-primary">9</button>
+                <button class="btn btn-primary">5</button>
+                <button class="btn btn-primary">0</button>
+                <button class="btn btn-primary">3</button>
+                <button class="btn btn-primary">8</button>
+                <button class="btn btn-primary">&lt;-</button>
+                <button class="btn btn-primary">6</button>
+                <button class="btn btn-secondary">reset</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="box container">
+            <div class="logo">
+                <a href='./index.html'><img src="./resource/img/logo.png" alt="logo" title="logo"></a>
+            </div>
+
+            
+            <div class="ect">     
+                <div class="footer__menu">
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">도로명주소안내</a>
+                    <a href="#">사이트맵</a>
+                </div>
+
+                <p class="copyright">인천시 부평구 무네미로 448번길 77 전국기능경기대회
+                <br>COPYRIGHTⓒ 2021 HRDKOREA</p>
+            </div>
+
+            <div class="sns">
+                <div class="item"><img src="./resource/img/sns/sns_1.png" alt="sns-image"></div>
+                <div class="item"><img src="./resource/img/sns/sns_2.png" alt="sns-image"></div>
+                <div class="item"><img src="./resource/img/sns/sns_3.png" alt="sns-image"></div>
+                <div class="item"><img src="./resource/img/sns/sns_4.png" alt="sns-image"></div>
+                <div class="item"><img src="./resource/img/sns/sns_5.png" alt="sns-image"></div>
+            </div>
+        </div>
+    </footer>
+    <script src="./resource/js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./resource/js/jquery-3.4.1.min.js"></script>
+    <script src="./resource/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./resource/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="./resource/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./resource/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href='./index.html'><img src="./resource/img/logo.png" alt="logo" title="logo"></a>
+        </div>
+
+        <nav>
+            <ul style="margin: 0; padding: 0;">
+                <li><a href="/basket.html">장바구니</a></li>
+                <li><a href="#">조회하기</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="/register.html">회원가입</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="basket">
+        <div class="container">
+           <h2 class="mb-5">장바구니</h2>
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">상품 사진</th>
+                        <th scope="col">상품명</th>
+                        <th scope="col">수량</th>
+                        <th scope="col">가격</th>
+                        <th style="width: 12.8%;" scope="col">소계</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="6">장바구니에 담긴 상품이 없습니다</td></tr>
+                </tbody>
+            </table>
+
+            <div class="etc mb-5">
+                <span class="total-price">99,999,999\</span>
+                <button class="reser btn-cus">예약하기</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="box container">
+            <div class="logo">
+                <a href='./index.html'><img src="./resource/img/logo.png" alt="logo" title="logo"></a>
+            </div>
+
+            
+            <div class="ect">     
+                <div class="footer__menu">
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">도로명주소안내</a>
+                    <a href="#">사이트맵</a>
+                </div>
+
+                <p class="copyright">인천시 부평구 무네미로 448번길 77 전국기능경기대회
+                <br>COPYRIGHTⓒ 2021 HRDKOREA</p>
+            </div>
+
+            <div class="sns">
+                <div class="item"><img src="./resource/img/sns/sns_1.png" alt="sns-image"></div>
+                <div class="item"><img src="./resource/img/sns/sns_2.png" alt="sns-image"></div>
+                <div class="item"><img src="./resource/img/sns/sns_3.png" alt="sns-image"></div>
+                <div class="item"><img src="./resource/img/sns/sns_4.png" alt="sns-image"></div>
+                <div class="item"><img src="./resource/img/sns/sns_5.png" alt="sns-image"></div>
+            </div>
+        </div>
+    </footer>
+    <script src="./resource/js/basket.js"></script>
+</body>
+</html>
