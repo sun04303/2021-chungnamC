@@ -335,50 +335,45 @@
                 <div class="item">
                     <div class="circle circle-1">
                         <img src="./resource/img/sug/바케트.png" alt="sug_bread">
-                        <span>명랑 바게트</span>
-                        <span><b>393</b>개</span>
+                        <span>총 예약 수량 <b><?= $data[0]->cnt ?></b>개</span>
                     </div>
                     <div class="mini-circle mini-circle-1">
                         <h4>1</h4>
-                        <span>성심당</span>
+                        <span><?= $data[0]->name ?></span>
                     </div>
                 </div>
                 <div class="item">
                     <div class="mini-circle mini-circle-2">
                         <h4>2</h4>
-                        <span>르뺑99-1</span>
+                        <span><?= $data[1]->name ?></span>
                     </div>
                     <div class="circle circle-2">
                         <img src="./resource/img/sug/치즈.png" alt="sug_bread">
-                        <span>딸기 생크림</span>
-                        <span><b>356</b>개</span>
+                        <span>총 예약 수량 <b><?= $data[1]->cnt ?></b>개</span>
                     </div>
                 </div>
                 <div class="item">
                     <div class="circle circle-3">
                         <img src="./resource/img/sug/식빵.png" alt="sug_bread">
-                        <span>180겹 크로와상 식빵</span>
-                        <span><b>240</b>개</span>
+                        <span>총 예약 수량 <b><?= $data[2]->cnt ?></b>개</span>
                     </div>
                     <div class="mini-circle mini-circle-3">
                         <h4>3</h4>
-                        <span>한스브레드</span>
+                        <span><?= $data[2]->name ?></span>
                     </div>
                 </div>
                 <div class="item">
                     <div class="mini-circle mini-circle-4">
                         <h4>4</h4>
-                        <span>하레하레</span>
+                        <span><?= $data[3]->name ?></span>
                     </div>
                     <div class="circle circle-4">
                         <img src="./resource/img/sug/케이크.png" alt="sug_bread">
-                        <span>제리 치즈케이크</span>
-                        <span><b>204</b>개</span>
+                        <span>총 예약 수량 <b><?= $data[3]->cnt ?></b>개</span>
                     </div>
                 </div>
             </div>
         </div>
-
         <div id="gal" class="gal">
             <h2>갤러리</h2>
 

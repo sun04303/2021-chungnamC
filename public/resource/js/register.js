@@ -34,14 +34,14 @@ $('#num').on('keydown', e => {
 })
 
 $('#num').on('focus', e => {
-    makeKeyboard()
+    regiMakeKeyboard()
 })
 
 window.addEventListener('click', e => {
-    if(!e.target.classList.contains('keyboard') && e.target != document.querySelector('#num') && !e.target.classList.contains('btn')) {
+    if(!e.target.classList.contains('regi_keyboard') && e.target != document.querySelector('#num') && !e.target.classList.contains('btn')) {
         let str = $('#num').val()
 
-        document.querySelector('.keyboard').style.display = 'none'
+        document.querySelector('.regi_keyboard').style.display = 'none'
 
         if(code_pattern.test(str)) {
             $('label[for="num"] .warning').html('')
@@ -55,7 +55,7 @@ window.addEventListener('click', e => {
     }
 })
 
-document.querySelector('.keyboard').addEventListener('click', e => {
+document.querySelector('.regi_keyboard').addEventListener('click', e => {
     e.preventDefault()
     if($(e.target).prop('tagName') == 'DIV') return
     let val = $('#num').val()
@@ -63,17 +63,17 @@ document.querySelector('.keyboard').addEventListener('click', e => {
     if(e.target.classList.contains('del')) {
         $('#num').val(val.substr(0, val.length-1))
     } else if(e.target.classList.contains('reset')) {
-        makeKeyboard()
+        regiMakeKeyboard()
     } else if(val.length < 6) {
         $('#num').val($('#num').val()+e.target.innerHTML)
     }
 })
 
-function makeKeyboard() {
+function regiMakeKeyboard() {
     let html = ''
     let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-    $('.keyboard').css({
+    $('.regi_keyboard').css({
         display:'grid'
     })
 
@@ -85,7 +85,7 @@ function makeKeyboard() {
     html+=` <button class="btn btn-secondary del">&lt;-</button>
             <button class="btn btn-primary">${arr[0]}</button>
             <button class="btn btn-secondary reset">reset</button>`
-    $('.keyboard').html(html)
+    $('.regi_keyboard').html(html)
 }
 
 

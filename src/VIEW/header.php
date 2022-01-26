@@ -20,9 +20,18 @@
         <nav>
             <ul style="margin: 0; padding: 0;">
                 <li><a href="/basket">장바구니</a></li>
-                <li><a href="#">조회하기</a></li>
-                <li><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">로그인</a></li>
-                <li><a href="/register">회원가입</a></li>
+                <li><a href="/refer">조회하기</a></li>
+
+                <?php if(isset($_SESSION['user']) && $_SESSION['user']->status == 'yes'): ?>
+                    <li><a href="/logout">로그아웃</a></li>
+                    <li><a href="#">회원정보수정</a></li>
+                <?php elseif(isset($_SESSION['user']) && $_SESSION['user']->status == 'no'): ?>
+                    <li><a href="/logout">로그아웃</a></li>
+                    <li><a href="/register">회원가입</a></li>
+                <?php else: ?>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">로그인</a></li>
+                    <li><a href="/register">회원가입</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
 
@@ -40,10 +49,10 @@
                         <label class="login-label" for="regi_member">회원 로그인</label><label class="login-label" for="regi_nomember">비회원 로그인</label>
 
                         <div class="form_box mt-4">
-                            <form action="/member_login" class="regi_member">
+                            <form action="/member_login" method="post" class="regi_member">
                                 <div class="mb-3">
                                     <label for="login_id" class="form-label">아이디</label>
-                                    <input type="text" name="login_id" id="login_id" class="form-control" placeholder="아이디를 입력해주세요.">
+                                    <input type="text" name="login_id" id="login_id" class="form-control" placeholder="아이디를 입력해주세요." autocomplete="off">
                                 </div>
                                 <div class="mb-3">
                                     <label for="login_pass" class="form-label">비밀번호</label>
@@ -51,25 +60,29 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="code" class="form-label">인증번호</label>
-                                    <input type="text" name="code" id="code" class="form-control" placeholder="인증번호를 입력해주세요.">
+                                    <input type="text" name="code" id="code" class="form-control" placeholder="인증번호를 입력해주세요." autocomplete="off">
                                 </div>
                                 <button class="btn btn-cus yes" type="submit">로그인</button>
                             </form>
     
-                            <form action="/nomember_login" class="regi_nomember">
+                            <form action="/nomember_login" method="post" class="regi_nomember">
                                 <div class="mb-3">
                                     <label for="login_name" class="form-label">예약자 이름</label>
-                                    <input type="text" name="login_name" id="login_name" class="form-control" placeholder="예약자 이름을 입력해주세요.">
+                                    <input type="text" name="login_name" id="login_name" class="form-control" placeholder="예약자 이름을 입력해주세요." autocomplete="off">
                                 </div>
                                 <div class="mb-3">
                                     <label for="login_tel" class="form-label">예약자 전화번호</label>
-                                    <input type="tel" name="login_tel" id="login_tel" class="form-control" placeholder="예약자 전화번호를 입력해주세요.">
+                                    <input type="tel" name="login_tel" id="login_tel" class="form-control" placeholder="예약자 전화번호를 입력해주세요." autocomplete="off">
                                 </div>
                                 <button class="btn btn-cus no" type="submit">로그인</button>
                             </form>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="keyboard login_keyboard">
+                
             </div>
         </div>
     </header>

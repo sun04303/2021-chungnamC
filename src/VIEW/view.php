@@ -23,7 +23,7 @@
                     </div>
 
                     <button class="btn-cus basket-btn">장바구니 담기</button>
-                    <button class="btn-cus">바로예약</button>
+                    <button class="btn-cus text-center order-btn">바로예약</button>
                 </div>
             </div>
         </div>

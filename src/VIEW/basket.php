@@ -19,8 +19,8 @@
             </table>
 
             <div class="etc mb-5">
-                <span class="total-price">99,999,999\</span>
-                <button class="reser btn-cus">예약하기</button>
+                <span class="total-price">0\</span>
+                <a href="/order?type=basket" class="reser btn-cus">예약하기</a>
             </div>
         </div>
     </section>

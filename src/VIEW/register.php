@@ -32,7 +32,7 @@
             </form>
 
 
-            <div class="keyboard">
+            <div class="keyboard regi_keyboard">
                 
             </div>
         </div>

@@ -22,14 +22,20 @@ window.addEventListener('load', e => {
             if(basket) {
                 basket.push(data)
                 localStorage.setItem('basket', JSON.stringify(basket))
-                location.href = '/basket.html'
+                location.href = '/basket'
             } else {
                 basket = [data]
                 localStorage.setItem('basket', JSON.stringify(basket))
-                location.href = '/basket.html'
+                location.href = '/basket'
             }
         })
+
+        document.querySelector('.order-btn').addEventListener('click', e => {
+            data.cnt = $('#cnt').val()
+            localStorage.setItem('product', JSON.stringify(data))
+            location.href = '/order?type=view'
+        })
     } else {
-        location.href = '/storelist.html'
+        location.href = '/storelist'
     }
 })

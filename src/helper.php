@@ -1,5 +1,5 @@
 <?php
-    function view_main() {
+    function view_main($data) {
         require VIEW."/main_header.php";
         require VIEW."/main.php";
         require VIEW."/footer.php";
@@ -19,4 +19,11 @@
         echo "location.href = '{$url}';";
         echo "</script>";
         exit;
+    }
+
+    function back($msg) {
+        echo "<script>";
+        echo "alert('$msg');";
+        echo "history.back();";
+        echo "</script>";
     }

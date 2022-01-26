@@ -15,6 +15,16 @@ ul, ol {list-style: none;}
 
 a, a:hover {text-decoration: none;}
 
+input:focus, select:focus {outline: none;}
+
+table {vertical-align: middle !important;}
+
+table img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
 .scrole::-webkit-scrollbar {width: 10px;}
 
 .main h2 {
@@ -22,9 +32,7 @@ a, a:hover {text-decoration: none;}
     position: absolute;
 }
 
-.warning {
-    color: #f00;
-}
+.warning {color: #f00;}
 
 .btn-cus { 
     position: relative;
@@ -705,15 +713,11 @@ footer .sns .item img {width: 100%;}
     cursor: pointer;
 }
 
-.shoplist .goods img.select {
-    border: 2px solid #000;
-}
+.shoplist .goods img.select {border: 2px solid #000;}
 
 .shoplist .modal-body {display: flex;}
 
-.shoplist .modal .text {
-    margin-left: 20px;
-}
+.shoplist .modal .text {margin-left: 20px;}
 
 /* 찜하기 */
 
@@ -803,14 +807,6 @@ footer .sns .item img {width: 100%;}
     flex-direction: column;
 }
 
-.basket table {vertical-align: middle;}
-
-.basket table img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
 .basket .etc {align-self: flex-end;}
 
 .basket .etc button {margin-left: 20px;}
@@ -827,9 +823,8 @@ footer .sns .item img {width: 100%;}
     align-self: flex-end;
 }
 
-.register .keyboard {
+.keyboard {
     width: 200px;
-    margin: -70px 0 30px;
     padding: 10px;
     border-radius: 5px;
     gap: 5px;
@@ -838,6 +833,13 @@ footer .sns .item img {width: 100%;}
     display: none;
     position: absolute;
     background-color: rgba(0, 0, 0, .7);
+}
+
+.regi_keyboard {margin: -70px 0 30px;}
+
+.login_keyboard {
+    margin-top: -20px;
+    left: 37%;
 }
 
 /* 로그인 */
@@ -871,3 +873,45 @@ footer .sns .item img {width: 100%;}
 
 #regi_member:checked ~ label[for="regi_member"] {background-color: #000; color: #fff;}
 #regi_nomember:checked ~ label[for="regi_nomember"] {background-color: #000; color: #fff;}
+
+/* 예약하기 */
+
+.order .how {display: flex;}
+
+.order .how label {
+    width: 150px;
+    height: 170px;
+    margin-right: 20px;
+    
+    border-radius: 15px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.order .how i {font-size: 40px;}
+.order .how span {color: #aaa;}
+
+input[id="card"]:checked ~ label[for="card"] {border: 3px solid #000;}
+input[id="money"]:checked ~ label[for="money"] {border: 3px solid #000;}
+
+input[id="card"]:checked ~ label[for="card"] span {color: #000; font-weight: bold;}
+input[id="money"]:checked ~ label[for="money"] span {color: #000; font-weight: bold;}
+
+/* 조회하기 */
+
+.refer {
+    min-height: calc(100vh - 348px);
+}
+
+.refer .search {
+    display: flex;
+    justify-content: space-between;
+}
+
+.refer #search {width: 1030px;}
+
+.refer .date {display: none;}

@@ -112,9 +112,9 @@ function makegoods(data, target) {
             if(left + top < 1 && !stat) {
                 let id = Number(e.target.dataset.id)
                 let product = data.find(item => item.image.split('.')[0] == id + 1)
-
+                product.id = id
                 localStorage.setItem('product', JSON.stringify(product))
-                location.href = '/view.html'
+                location.href = '/view'
             } else if(stat && selectGoods.length < 5) {
                 e.target.classList.toggle("select")
                 selectGoods.push(e.target)
@@ -219,8 +219,9 @@ function updateCart(arr, data, cart) {
             if(left + top < 1) {
                 let id = Number(e.target.src.split('/').reverse()[0].split('.')[0])
                 let product = data.find(item => item.image.split('.')[0] == id)
+                product.id = id
                 localStorage.setItem('product', JSON.stringify(product))
-                location.href = '/view.html'
+                location.href = '/view'
             }
         })
     })

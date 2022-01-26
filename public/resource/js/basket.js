@@ -27,6 +27,7 @@ function makeList(arr) {
 
         tr.querySelector('input').addEventListener('change', e => {
             arr[idx].cnt = e.target.value
+            localStorage.setItem('basket', JSON.stringify(arr))
             $(`.last${idx}`).html(`${(Number(e.target.value) * price).toLocaleString()}\\`)
             total(arr)
         })
